@@ -10,10 +10,10 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-FROM quay.io/centos/centos:7
+FROM quay.io/centos/centos:stream8
 MAINTAINER Jiri Stransky <jistr@jistr.com>
 
-RUN yum clean expire-cache && yum -y update && yum clean all
+RUN dnf clean expire-cache && dnf -y update && dnf clean all
 
 ADD znc-install.sh /znc-install.sh
 RUN /znc-install.sh; rm /znc-install.sh
