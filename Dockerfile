@@ -10,7 +10,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-FROM quay.io/centos/centos:stream8
+FROM quay.io/fedora/fedora:40-x86_64
 MAINTAINER Jiri Stransky <jistr@jistr.com>
 
 RUN dnf clean expire-cache && dnf -y update && dnf clean all
